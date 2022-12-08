@@ -1140,7 +1140,7 @@
 
                 const utcDate = match.utcDate
                 const matchTime = new Date(utcDate)
-                const dateString = matchTime.getUTCFullYear() + " - " + (matchTime.getUTCMonth()+1) + " - " + matchTime.getUTCDate() + '<br>' +  matchTime.getUTCHours() + ":" + matchTime.getUTCMinutes()+0
+                const dateString = "( " +matchTime.getUTCFullYear() + " - " + (matchTime.getUTCMonth()+1) + " - " + matchTime.getUTCDate() +" )"+ '<br>' +  matchTime.getUTCHours() + ":" + matchTime.getUTCMinutes()+0
                 
                 if(homeTeam.name == null){
                     continue
@@ -1170,7 +1170,7 @@
                                             style="width: 40px; height: 40px; object-fit:cover;"
                                         >
                                     </div>
-                                    <h5 class="mt-2" style="margin:auto 4px"><b>${homeTeam.tla}</b></h5>
+                                    <h5 class="mt-2" style="margin:auto 4px"><b>( ${homeTeam.tla} )</b></h5>
                                 </div>
                             </div>
                         </div>
@@ -1180,17 +1180,17 @@
                             <div class="row">
                                 <div class="col-4" style="margin: auto 0px">
                                     <h3><b>
-                                        ${match.score.fullTime.home ?? "-"}
+                                        ( ${match.score.fullTime.home ?? "-"} )
                                     </b></h3>
                                     </div>
                                 <div class="col-4" style="margin: auto 0px">
-                                     <h6><b>${match.group ?? `${match.stage}`}</b></h6>
+                                     <h6><b>( ${match.group ?? `${match.stage}`} )</b></h6>
                                      <h1>X</h1>
-                                     <h6><b>${dateString}</b></h6>
+                                     <h6><b><b>${dateString}</b></b></h6>
                                     </div>
                                 <div class="col-4" style="margin: auto 0px">
                                     <h3><b>
-                                        ${match.score.fullTime.away ?? "-"}
+                                        ( ${match.score.fullTime.away ?? "-"} )
                                     </b></h3>
                                     </div>
                                 </div>
@@ -1211,7 +1211,7 @@
                                             style="width: 40px; height: 40px;object-fit:cover;"
                                         >
                                     </div>
-                                    <h5 class="mt-2" style="margin:auto 4px"><b>${awayTeam.tla}</b></h5>
+                                    <h5 class="mt-2" style="margin:auto 4px"><b>( ${awayTeam.tla} )</b></h5>
                                 </div>
                             </div>
                         </div>
